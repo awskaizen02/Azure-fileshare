@@ -1,0 +1,45 @@
+
+1. Storage Account Limits
+Resource								Standard Limit								Notes
+Max file shares per storage account		Unlimited (GPv2)						Reference
+Max capacity per storage account		5 PiB (with large file shares enabled)	Default is 100 TiB
+Max ingress/egress bandwidth			50 Gbps (LRS/ZRS)					  Depends on redundancy
+
+
+2. File Share Limits
+Resource								Premium (SSD)				Standard (Hot/Cool)
+Max share size							100 TiB					100 TiB (large file shares enabled)
+Default max share size					5 TiB					5 TiB (can be increased)
+Max file size							4 TiB					4 TiB
+Max IOPS per share						Up to 100,000			1,000 IOPS + burst up to 3,000
+Max throughput per share				Up to 10,240 MiB/s		Up to 60 MiB/s
+Max open handles per file				2,000					2,000
+
+
+1. SMB Limits
+	Max concurrent connections: 2,000 (Premium), 1,000 (Standard)
+	Max open files per share: 25,000
+	Supports SMB Multichannel (Premium only)
+
+2. NFS (v4.1) Limits
+	Max concurrent connections: 1,000
+	Max open files per share: 25,000
+
+3. Performance Considerations
+	Premium file shares: Consistent low-latency, high IOPS
+	Standard file shares: Burstable performance (scales with size)
+
+
+
+Enable large file shares if >5 TiB is needed.
+Use Premium tier for high IOPS/low latency workloads.
+Monitor metrics (IOPS, throughput, latency).
+Enable snapshots for backup & recovery.
+Use Azure File Sync for hybrid cloud caching.
+
+
+https://learn.microsoft.com/en-us/azure/storage/files/storage-files-scale-targets
+
+https://learn.microsoft.com/en-us/azure/storage/files/storage-files-planning#enable-large-file-shares
+
+https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-ad-ds-overview
