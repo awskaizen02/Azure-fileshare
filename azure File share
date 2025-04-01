@@ -1,19 +1,18 @@
 
-1. Storage Account Limits
-Resource								Standard Limit								Notes
+1. Storage Account Limits Resource		   Standard Limit		                 		  Notes
 Max file shares per storage account		Unlimited (GPv2)						Reference
-Max capacity per storage account		5 PiB (with large file shares enabled)	Default is 100 TiB
-Max ingress/egress bandwidth			50 Gbps (LRS/ZRS)					  Depends on redundancy
+Max capacity per storage account		5 PiB (with large file shares enabled)	                     Default is 100 TiB
+Max ingress/egress bandwidth			50 Gbps (LRS/ZRS)					     Depends on redundancy
 
 
 2. File Share Limits
 Resource								Premium (SSD)				Standard (Hot/Cool)
 Max share size							100 TiB					100 TiB (large file shares enabled)
-Default max share size					5 TiB					5 TiB (can be increased)
+Default max share size					        5 TiB					5 TiB (can be increased)
 Max file size							4 TiB					4 TiB
-Max IOPS per share						Up to 100,000			1,000 IOPS + burst up to 3,000
-Max throughput per share				Up to 10,240 MiB/s		Up to 60 MiB/s
-Max open handles per file				2,000					2,000
+Max IOPS per share						Up to 100,000			        1,000 IOPS + burst up to 3,000
+Max throughput per share				       Up to 10,240 MiB/s		        Up to 60 MiB/s
+Max open handles per file				       2,000					2,000
 
 
 1. SMB Limits
